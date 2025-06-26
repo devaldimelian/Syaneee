@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Anee yang Maniss 🤍✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom right, #fff0f5, #ffe6f0);
+      background-image: 
+        url('https://www.transparenttextures.com/patterns/hearts.png'),
+        radial-gradient(circle at top left, #ffd6e8, transparent 50%),
+        radial-gradient(circle at bottom right, #ffe6f2, transparent 50%);
+      background-blend-mode: overlay;
+      overflow-x: hidden;
+    }
+    .container {
+      background: white;
+      max-width: 650px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.25);
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 1.5s ease;
+    }
+    .step {
+      display: none;
+      animation: fadeIn 1s ease;
+    }
+    .step.active {
+      display: block;
+    }
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5em;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2em;
+      color: #b30059;
+      font-style: italic;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+    img {
+      width: 130px;
+      max-width: 100%;
+      height: auto;
+      margin: 25px 0;
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    .btn-next {
+      margin-top: 30px;
+      padding: 12px 35px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff69b4;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(255, 105, 180, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .btn-next:hover {
+      background-color: #e91e63;
+      transform: scale(1.05);
+    }
+    .flower-decor, .flower-decor2 {
+      position: absolute;
+      width: 80px;
+      max-width: 100%;
+      z-index: 1;
+    }
+    .flower-decor {
+      top: -30px;
+      left: -30px;
+    }
+    .flower-decor2 {
+      bottom: -30px;
+      right: -30px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .emoji-love {
+      font-size: 26px;
+      margin: 0 4px;
+    }
+    .falling-heart {
+      position: fixed;
+      top: -30px;
+      font-size: 22px;
+      animation: fall 4s linear infinite;
+      opacity: 0.8;
+      z-index: 0;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-50px); opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <img src="https://cdn-icons-png.flaticon.com/512/744/744467.png" class="flower-decor" alt="bunga kiri">
+  <img src="https://cdn-icons-png.flaticon.com/512/744/744467.png" class="flower-decor2" alt="bunga kanan">
+
+  <div class="container">
+    <div class="step active" id="step1">
+      <button onclick="nextStep(2)" style="background: none; border: none; padding: 0;">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Surat">
+      </button>
+      <p>Klik amplop cintanya ✉️<span class="emoji-love">💌</span></p>
+    </div>
+    <div class="step" id="step2">
+      <button onclick="nextStep(3)" style="background: none; border: none; padding: 0;">
+        <img src="https://cdn-icons-png.flaticon.com/512/5269/5269701.png" alt="Boneka">
+      </button>
+      <p>Klik boneka lucunya 🧸<span class="emoji-love">💖</span></p>
+    </div>
+    <div class="step" id="step3">
+      <h1>Ayat untuk Kamu 💌</h1>
+      <p>"Engkau cantik sekali, manisku, tak ada cacat padamu."<br><em>— Kidung Agung 4:7</em></p>
+      <button class="btn-next" onclick="nextStep(4)">Lanjutkan 💕</button>
+    </div>
+    <div class="step" id="step4">
+      <h1>Hei kamu yang kecil itu 🧸💖</h1>
+      <p>
+        Kamu mungkin merasa kecil, mungil, dan nggak percaya diri... 😔<br><br>
+        Tapi buat aku, kamu itu seperti bidadari yang jatuh dari langit ✨<br>
+        Ukuran tubuhmu nggak mengurangi sedikit pun pesonamu.<br><br>
+        Justru karena kamu kecil, aku ingin melindungimu 🤗,<br>
+        memelukmu erat 🫂, dan bilang...<br><br>
+        <strong>"Kamu itu satu-satunya bidadari yang berhasil mencuri hatiku." 🥺💘🕊️</strong>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function nextStep(n) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.getElementById('step' + n).classList.add('active');
+    }
+
+    const emojis = ["💖", "💘", "🧸", "💕", "🌸", "✨"];
+    setInterval(() => {
+      const emoji = document.createElement("div");
+      emoji.className = "falling-heart";
+      emoji.style.left = Math.random() * 100 + "vw";
+      emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+      emoji.style.animationDuration = (3 + Math.random() * 2) + "s";
+      document.body.appendChild(emoji);
+      setTimeout(() => emoji.remove(), 5000);
+    }, 500);
+  </script>
+</body>
+</html>
